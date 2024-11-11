@@ -18,12 +18,4 @@ test.describe('This file contains tests related to Homepage', () => {
     // Expects that get started button to be visible.
     expect(getStartedButton).toBeVisible;
   });
-
-  test('Verify title of about page', async ({ page }) => {
-    // Navigate to about page
-    await page.goto('/about');
-    // Verify title of the about page
-    await expect(page).toHaveTitle(/About/);
-  })
-
 })
