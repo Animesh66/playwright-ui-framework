@@ -13,13 +13,13 @@ test.describe('This page contains tests related to my account page', () => {
         await expect(page).toHaveTitle(/account/)
     })
 
-    test('Scenario to test user registration', async ({ page }) => {
+  test('Scenario to test user registration', async ({ page }) => {
         // Identify the username field
         await page.getByRole('textbox', { name: 'username' }).nth(1).fill('animesh66');
         // Identify the username field
         await page.getByRole('textbox', { name: 'email' }).nth(1).fill('test@email.com');
         // Identify the password field
-        await page.getByRole('textbox', { name: 'password' }).nth(1).fill('Welcome@123');
+        await page.getByRole('textbox', { name: 'password' }).nth(1).fill('AnimeshMukherjee@1234');
         // Identify Register button
         await page.getByRole('button', { name: 'register' }).click();
     })
