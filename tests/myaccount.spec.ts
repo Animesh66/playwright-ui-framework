@@ -15,18 +15,17 @@ test.describe('This page contains tests related to my account page', () => {
     })
 
     test('Scenario to test user registration', async ({ page }) => {
-        const username = 'er.animesh5478364'
-        await page.pause();
+        const username = 'er.animesh7676876';
         // Identify the username field
-        await expect(page.getByRole('textbox', { name: 'username' }).nth(1)).toBeVisible()
-        await page.getByRole('textbox', { name: 'username' }).nth(1).fill(username);
+        await expect(page.getByRole('textbox', { name: 'username' }).nth(1)).toBeVisible();
+        await page.getByRole('textbox', { name: 'username' }).nth(1).pressSequentially(username, { delay: 100 });
         // Identify the username field
-        await page.getByRole('textbox', { name: 'email' }).nth(1).fill('test67686@email.com');
+        await page.getByRole('textbox', { name: 'email' }).nth(1).pressSequentially('test7765675675@email.com', { delay: 100 });
         // Identify the password field
-        await expect(page.getByRole('textbox', { name: 'password' }).nth(1)).toBeVisible()
-        await page.getByRole('textbox', { name: 'password' }).nth(1).fill('AnimeshMukherjee@987651');
+        await expect(page.getByRole('textbox', { name: 'password' }).nth(1)).toBeVisible();
+        await page.getByRole('textbox', { name: 'password' }).nth(1).pressSequentially('AnimeshMukherjee@987651', { delay: 100 });
         // Identify Register button
-        await expect(page.getByRole('button', { name: 'Register' })).toBeVisible()
+        await expect(page.getByRole('button', { name: 'Register' })).toBeVisible();
         await page.getByRole('button', { name: 'Register' }).click();
         //Verify that my account page has logged in
         await expect(page.getByRole('link', { name: /Dashboard/})).toBeVisible();
