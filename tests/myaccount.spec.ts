@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test'
 
-
-
 test.describe('This page contains tests related to my account page', () => {
     const userName = 'Testuser65675765';
     const userEmail = `${userName}@email.com`;
