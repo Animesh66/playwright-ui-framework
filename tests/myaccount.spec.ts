@@ -3,11 +3,12 @@ import { test, expect } from '@playwright/test'
 
 
 test.describe('This page contains tests related to my account page', () => {
-    const userName = 'er.animesh54564654';
+    const userName = 'Testuser65675765';
     const userEmail = `${userName}@email.com`;
 
     test.beforeEach(async ({ page }) => {
         // Open the url of the account
+        await page.pause();
         await page.goto('/my-account');
         // Verify assertions
         await expect(page).toHaveTitle(/account/);
@@ -22,12 +23,19 @@ test.describe('This page contains tests related to my account page', () => {
         // Identify Register button
         await expect(page.getByRole('button', { name: 'Register' })).toBeVisible();
         await page.getByRole('button', { name: 'Register' }).click();
-        //Verify that my account page has logged in
-        await expect(page.getByRole('link', { name: /Dashboard/})).toBeVisible();
+
     })
 
-    test('Scenario to test user registration for non register user', async ({ page }) => {
+    test('Scenario to test user registration for non-registered user', async ({ page }) => {
+        //Verify that my account page has logged in and Dasboard link is displayed
+        await expect(page.getByRole('link', { name: /Dashboard/})).toBeVisible();
         // Verify that the username should be displayed on the page
         await expect(page.locator('.woocommerce-MyAccount-content')).toContainText(userName);
+    })
+
+    test('Scenario to test user registration for registered user', async ({page}) => {
+        // Verify that the username should be displayed on the page
+        await expect(page.locator('.woocommerce-error')).toContainText(`An account is already registered with ${userName}.`);
+
     })
 })
