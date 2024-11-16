@@ -8,8 +8,6 @@ class BlogPage extends BasePage {
         super(_page);
         this.recentPost = this._page.locator(".widget widget-sidebar-right");
 
-
-
     }
 
 }

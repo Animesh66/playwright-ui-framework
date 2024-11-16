@@ -23,4 +23,5 @@ class MyAccount extends BasePage {
 
 }
 
+
 export default MyAccount;
