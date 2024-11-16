@@ -1,6 +1,7 @@
 import { Locator, Page } from "@playwright/test";
+import BasePage from "./basePage.page";
 
-class MyAccount {
+class MyAccount extends BasePage {
     userNameRegistration: Locator;
     userEmailRegistration: Locator;
     userPasswordRegistration: Locator;
@@ -9,8 +10,8 @@ class MyAccount {
     myAccountContent: Locator;
     myAccountErrorMessage: Locator;
 
-    constructor(private _page: Page) {
-        this._page = _page;
+    constructor(protected _page: Page) {
+        super(_page);
         this.userNameRegistration = this._page.getByRole('textbox', { name: 'username' }).nth(1);
         this.userEmailRegistration = this._page.getByRole('textbox', { name: 'email' }).nth(1);
         this.userPasswordRegistration = this._page.getByRole('textbox', { name: 'password' }).nth(1);

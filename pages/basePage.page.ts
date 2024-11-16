@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 
 class BasePage {
 
-    constructor(private _page: Page) {
+    constructor(protected _page: Page) {
         this._page = _page;
     };
 

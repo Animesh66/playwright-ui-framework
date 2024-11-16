@@ -4,7 +4,7 @@ import MyAccount from '../pages/myaccount.page';
 test.describe.configure({ mode: 'serial' });
 
 test.describe('This page contains tests related to my account page', () => {
-    const userName = 'Testuser76287';
+    const userName = 'Testuser567r4';
     const userEmail = `${userName}@email.com`;
     const userPassword = 'AnimeshMukherjee@987651';
     let myAcount: MyAccount;
