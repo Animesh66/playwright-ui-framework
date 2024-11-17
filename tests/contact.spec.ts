@@ -1,8 +1,14 @@
 import { test, expect } from '@playwright/test';
 import ContactPage from '../pages/contact.page';
+import { faker } from '@faker-js/faker';
 
 test.describe('This file contains tests related to contact page', () => {
   let contact: ContactPage;
+  let firstName: string = faker.person.firstName();
+  let userEmail: string = faker.internet.email();
+  let userPhone: string = faker.phone.number();
+  let userMessage: string = faker.lorem.paragraph();
+
 
   test.beforeEach(({ page }) => {
     contact = new ContactPage(page);
@@ -15,7 +21,7 @@ test.describe('This file contains tests related to contact page', () => {
   test('Verify that success message after submitting the contact from', async () => {
 
     // Fill all the form
-    await contact.fillContactForm('Animesh', 'test123@gmail.com', '+44123456789', 'This is a test contact');
+    await contact.fillContactForm(firstName, userEmail, userPhone, userMessage);
     //  Submit the form
     await contact.submitContactForm();
     // Verify success message is appearing in the screen

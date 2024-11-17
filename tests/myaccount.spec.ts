@@ -1,12 +1,13 @@
 import { test, expect } from '@playwright/test'
 import MyAccount from '../pages/myaccount.page';
+import { faker } from '@faker-js/faker';
 
 test.describe.configure({ mode: 'serial' });
 
 test.describe('This page contains tests related to my account page', () => {
-    const userName = 'Testuser0901921092';
-    const userEmail = `${userName}@email.com`;
-    const userPassword = 'AnimeshMukherjee@987651';
+    const userName = faker.person.firstName();
+    const userEmail = faker.internet.email();
+    const userPassword = faker.internet.password();
     let myAccount: MyAccount;
 
     test.beforeEach(async ({ page }) => {

@@ -19,11 +19,11 @@ class ContactPage extends BasePage {
         this.successMessage = this._page.getByRole('alert');
     }
 
-    async fillContactForm(name: string, email: string, phone: string, conactMessage: string) {
-        await this.contactName.pressSequentially(name, { delay: 100 });
-        await this.conatctEmail.pressSequentially(email, { delay: 100 });
-        await this.contactPhone.pressSequentially(phone, { delay: 100 });
-        await this.contactMessage.pressSequentially(conactMessage, { delay: 100 });
+    async fillContactForm(name: string, email: string, phoneNumber: string, conactMessage: string) {
+        await this.contactName.fill(name);
+        await this.conatctEmail.fill(email);
+        await this.contactPhone.fill(phoneNumber);
+        await this.contactMessage.fill(conactMessage);
     }
 
     async submitContactForm() {
