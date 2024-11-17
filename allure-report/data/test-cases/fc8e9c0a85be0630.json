@@ -1,5 +1,5 @@
 {
-  "uid" : "eb59b82094ab8d8f",
+  "uid" : "fc8e9c0a85be0630",
   "name" : "Scenario to test user registration for non-registered user",
   "fullName" : "myaccount.spec.ts:34:9",
   "historyId" : "442797ce12995aa0cca4a721d7e67f29:5bd835b0d6b1d4ada3b9f0db936e82c8",
@@ -408,14 +408,12 @@
     "value" : "chromium"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "eb59b82094ab8d8f.json",
+  "source" : "fc8e9c0a85be0630.json",
   "parameterValues" : [ "chromium" ]
 }

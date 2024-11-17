@@ -12,7 +12,7 @@ Or pass the same value via command line:
 
 ***Generate Allure Report***
 
-allure generate allure-results -o allure-report --clean
+`allure generate allure-results -o allure-report --clean`
 
 ***Open Allure Report***
 `allure open allure-report`

@@ -1,12 +1,12 @@
 {
-  "uid" : "fa2154366797b498",
-  "name" : "Verify recent posts count must be equals to 5",
-  "fullName" : "blog.spec.ts:17:9",
-  "historyId" : "995cc8ea0b36d99b24bafbad8033ea13:5bd835b0d6b1d4ada3b9f0db936e82c8",
+  "uid" : "6501ef4ae8126266",
+  "name" : "Verify each recent post must have at least 10 charater for headign",
+  "fullName" : "blog.spec.ts:24:9",
+  "historyId" : "518d6cb76eefc19cc327b739eb8372dd:5bd835b0d6b1d4ada3b9f0db936e82c8",
   "time" : {
-    "start" : 1731873135027,
-    "stop" : 1731873139154,
-    "duration" : 4127
+    "start" : 1731873135026,
+    "stop" : 1731873139304,
+    "duration" : 4278
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,33 +21,33 @@
     "steps" : [ {
       "name" : "Before Hooks",
       "time" : {
-        "start" : 1731873135035,
-        "stop" : 1731873140091,
-        "duration" : 5056
+        "start" : 1731873135034,
+        "stop" : 1731873140173,
+        "duration" : 5139
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "beforeEach hook",
         "time" : {
-          "start" : 1731873135037,
-          "stop" : 1731873140091,
-          "duration" : 5054
+          "start" : 1731873135035,
+          "stop" : 1731873140172,
+          "duration" : 5137
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "fixture: browser",
           "time" : {
-            "start" : 1731873135047,
-            "stop" : 1731873135988,
-            "duration" : 941
+            "start" : 1731873135045,
+            "stop" : 1731873135989,
+            "duration" : 944
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "browserType.launch",
             "time" : {
-              "start" : 1731873135050,
+              "start" : 1731873135048,
               "stop" : 1731873135988,
-              "duration" : 938
+              "duration" : 940
             },
             "status" : "passed",
             "steps" : [ ],
@@ -67,17 +67,17 @@
         }, {
           "name" : "fixture: context",
           "time" : {
-            "start" : 1731873135989,
+            "start" : 1731873135990,
             "stop" : 1731873136011,
-            "duration" : 22
+            "duration" : 21
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "browser.newContext",
             "time" : {
-              "start" : 1731873135991,
-              "stop" : 1731873136010,
-              "duration" : 19
+              "start" : 1731873135992,
+              "stop" : 1731873136009,
+              "duration" : 17
             },
             "status" : "passed",
             "steps" : [ ],
@@ -98,15 +98,15 @@
           "name" : "fixture: page",
           "time" : {
             "start" : 1731873136012,
-            "stop" : 1731873136533,
-            "duration" : 521
+            "stop" : 1731873136532,
+            "duration" : 520
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "browserContext.newPage",
             "time" : {
-              "start" : 1731873136014,
-              "stop" : 1731873136533,
+              "start" : 1731873136013,
+              "stop" : 1731873136532,
               "duration" : 519
             },
             "status" : "passed",
@@ -128,8 +128,8 @@
           "name" : "page.goto(/blog)",
           "time" : {
             "start" : 1731873136537,
-            "stop" : 1731873140046,
-            "duration" : 3509
+            "stop" : 1731873140106,
+            "duration" : 3569
           },
           "status" : "passed",
           "steps" : [ ],
@@ -142,9 +142,9 @@
         }, {
           "name" : "expect.toHaveTitle",
           "time" : {
-            "start" : 1731873140049,
-            "stop" : 1731873140091,
-            "duration" : 42
+            "start" : 1731873140113,
+            "stop" : 1731873140172,
+            "duration" : 59
           },
           "status" : "passed",
           "steps" : [ ],
@@ -169,10 +169,85 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "locator.count(#recent-posts-3 ul li)",
+      "name" : "locator.elementHandles(#recent-posts-3 ul li)",
       "time" : {
-        "start" : 1731873140092,
-        "stop" : 1731873140097,
+        "start" : 1731873140174,
+        "stop" : 1731873140192,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "elementHandle.textContent",
+      "time" : {
+        "start" : 1731873140194,
+        "stop" : 1731873140216,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "expect.toBeGreaterThan",
+      "time" : {
+        "start" : 1731873140217,
+        "stop" : 1731873140217,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "elementHandle.textContent",
+      "time" : {
+        "start" : 1731873140218,
+        "stop" : 1731873140224,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "expect.toBeGreaterThan",
+      "time" : {
+        "start" : 1731873140225,
+        "stop" : 1731873140225,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "elementHandle.textContent",
+      "time" : {
+        "start" : 1731873140226,
+        "stop" : 1731873140231,
         "duration" : 5
       },
       "status" : "passed",
@@ -184,10 +259,70 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "expect.toEqual",
+      "name" : "expect.toBeGreaterThan",
       "time" : {
-        "start" : 1731873140098,
-        "stop" : 1731873140098,
+        "start" : 1731873140232,
+        "stop" : 1731873140232,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "elementHandle.textContent",
+      "time" : {
+        "start" : 1731873140233,
+        "stop" : 1731873140238,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "expect.toBeGreaterThan",
+      "time" : {
+        "start" : 1731873140239,
+        "stop" : 1731873140240,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "elementHandle.textContent",
+      "time" : {
+        "start" : 1731873140241,
+        "stop" : 1731873140246,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "expect.toBeGreaterThan",
+      "time" : {
+        "start" : 1731873140247,
+        "stop" : 1731873140247,
         "duration" : 0
       },
       "status" : "passed",
@@ -201,17 +336,17 @@
     }, {
       "name" : "After Hooks",
       "time" : {
-        "start" : 1731873140099,
-        "stop" : 1731873140112,
-        "duration" : 13
+        "start" : 1731873140248,
+        "stop" : 1731873140262,
+        "duration" : 14
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "fixture: page",
         "time" : {
-          "start" : 1731873140099,
-          "stop" : 1731873140100,
-          "duration" : 1
+          "start" : 1731873140249,
+          "stop" : 1731873140249,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ ],
@@ -224,8 +359,8 @@
       }, {
         "name" : "fixture: context",
         "time" : {
-          "start" : 1731873140100,
-          "stop" : 1731873140100,
+          "start" : 1731873140249,
+          "stop" : 1731873140249,
           "duration" : 0
         },
         "status" : "passed",
@@ -246,7 +381,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 15,
+    "stepsCount" : 24,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -269,7 +404,7 @@
     "value" : "Animeshs-MacBook-Pro.local"
   }, {
     "name" : "thread",
-    "value" : "pid-19493-worker-0"
+    "value" : "pid-19493-worker-1"
   }, {
     "name" : "parentSuite",
     "value" : "chromium"
@@ -288,14 +423,12 @@
     "value" : "chromium"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "fa2154366797b498.json",
+  "source" : "6501ef4ae8126266.json",
   "parameterValues" : [ "chromium" ]
 }
