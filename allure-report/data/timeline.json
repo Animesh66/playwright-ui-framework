@@ -1,0 +1,110 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Animeshs-MacBook-Pro.local",
+    "children" : [ {
+      "name" : "pid-19493-worker-3",
+      "children" : [ {
+        "name" : "Scenario to test user registration for non-registered user",
+        "uid" : "eb59b82094ab8d8f",
+        "parentUid" : "131823bf25018c314881312ef8a699a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731873135206,
+          "stop" : 1731873146322,
+          "duration" : 11116
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      }, {
+        "name" : "Scenario to test user registration for registered user",
+        "uid" : "ba972e110fb9c048",
+        "parentUid" : "131823bf25018c314881312ef8a699a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731873147038,
+          "stop" : 1731873156138,
+          "duration" : 9100
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "131823bf25018c314881312ef8a699a1"
+    }, {
+      "name" : "pid-19493-worker-0",
+      "children" : [ {
+        "name" : "Verify recent posts count must be equals to 5",
+        "uid" : "fa2154366797b498",
+        "parentUid" : "1790101fb21634b2a18c7112dfaadb2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731873135027,
+          "stop" : 1731873139154,
+          "duration" : 4127
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "1790101fb21634b2a18c7112dfaadb2c"
+    }, {
+      "name" : "pid-19493-worker-2",
+      "children" : [ {
+        "name" : "Verify that success message after submitting the contact from",
+        "uid" : "c6b4dd465e067886",
+        "parentUid" : "592c408815d48a1b4ba0ee99e4bcdc82",
+        "status" : "failed",
+        "time" : {
+          "start" : 1731873135214,
+          "stop" : 1731873138529,
+          "duration" : 3315
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "592c408815d48a1b4ba0ee99e4bcdc82"
+    }, {
+      "name" : "pid-19493-worker-1",
+      "children" : [ {
+        "name" : "Verify each recent post must have at least 10 charater for headign",
+        "uid" : "40e635060c4d8386",
+        "parentUid" : "d46a241a426a8ac8bdb4597ef30ba6b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731873135026,
+          "stop" : 1731873139304,
+          "duration" : 4278
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "d46a241a426a8ac8bdb4597ef30ba6b9"
+    } ],
+    "uid" : "693a43bf68384fd32b915d8aee9b6f4f"
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error: locator.fill: Error: strict mode violation: getByLabel('Message') resolved to 2 elements:\n    1) <textarea class=\"input-text\" id=\"evf-277-field_yhGx3FOwr2-4\" name=\"everest_forms[form_fields][yhGx3FOwr2-4]\"></textarea> aka getByRole('textbox', { name: 'Message' })\n    2) <input type=\"text\" class=\"input-text\" id=\"evf-277-field-hp\" name=\"everest_forms[hp]\"/> aka locator('#evf-277-field-hp')\n\nCall log:\n  - waiting for getByLabel('Message')\n",
+      "children" : [ {
+        "name" : "Verify that success message after submitting the contact from",
+        "uid" : "c6b4dd465e067886",
+        "parentUid" : "415c03b85d16293ad2c2856668542d8a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1731873135214,
+          "stop" : 1731873138529,
+          "duration" : 3315
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "415c03b85d16293ad2c2856668542d8a"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

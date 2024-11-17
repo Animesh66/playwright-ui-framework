@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Nov 17 20:52:27 CET 2024","Sun Nov 17 20:52:36 CET 2024","9100","chromium","myaccount.spec.ts","This page contains tests related to my account page","","","Scenario to test user registration for registered user",""
+"passed","Sun Nov 17 20:52:15 CET 2024","Sun Nov 17 20:52:19 CET 2024","4127","chromium","blog.spec.ts","This file contains tests related to blog page","","","Verify recent posts count must be equals to 5",""
+"passed","Sun Nov 17 20:52:15 CET 2024","Sun Nov 17 20:52:26 CET 2024","11116","chromium","myaccount.spec.ts","This page contains tests related to my account page","","","Scenario to test user registration for non-registered user",""
+"failed","Sun Nov 17 20:52:15 CET 2024","Sun Nov 17 20:52:18 CET 2024","3315","chromium","contact.spec.ts","This file contains tests related to contact page","","","Verify that success message after submitting the contact from",""
+"passed","Sun Nov 17 20:52:15 CET 2024","Sun Nov 17 20:52:19 CET 2024","4278","chromium","blog.spec.ts","This file contains tests related to blog page","","","Verify each recent post must have at least 10 charater for headign",""

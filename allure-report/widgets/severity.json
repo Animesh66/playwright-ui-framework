@@ -1,0 +1,51 @@
+[ {
+  "uid" : "ba972e110fb9c048",
+  "name" : "Scenario to test user registration for registered user",
+  "time" : {
+    "start" : 1731873147038,
+    "stop" : 1731873156138,
+    "duration" : 9100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "40e635060c4d8386",
+  "name" : "Verify each recent post must have at least 10 charater for headign",
+  "time" : {
+    "start" : 1731873135026,
+    "stop" : 1731873139304,
+    "duration" : 4278
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb59b82094ab8d8f",
+  "name" : "Scenario to test user registration for non-registered user",
+  "time" : {
+    "start" : 1731873135206,
+    "stop" : 1731873146322,
+    "duration" : 11116
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c6b4dd465e067886",
+  "name" : "Verify that success message after submitting the contact from",
+  "time" : {
+    "start" : 1731873135214,
+    "stop" : 1731873138529,
+    "duration" : 3315
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa2154366797b498",
+  "name" : "Verify recent posts count must be equals to 5",
+  "time" : {
+    "start" : 1731873135027,
+    "stop" : 1731873139154,
+    "duration" : 4127
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
