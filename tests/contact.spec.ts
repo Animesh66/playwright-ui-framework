@@ -12,7 +12,7 @@ test.describe('This file contains tests related to contact page', () => {
     expect(page).toHaveTitle(/Contact/);
   })
 
-  test('Verify that success message after submitting the contact from', async ({ page }) => {
+  test('Verify that success message after submitting the contact from', async () => {
 
     // Fill all the form
     await contact.fillContactForm('Animesh', 'test123@gmail.com', '+44123456789', 'This is a test contact');
