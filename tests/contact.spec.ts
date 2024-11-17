@@ -7,7 +7,7 @@ test.describe('This file contains tests related to contact page', () => {
   test.beforeEach(({ page }) => {
     contact = new ContactPage(page);
     // Naviagte to the contact page
-    contact.navigatePage('/contact');
+    contact.navigatePage('/contact/');
     // Verify that page title contains Conatact
     expect(page).toHaveTitle(/Contact/);
   })
