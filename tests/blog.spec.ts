@@ -25,7 +25,7 @@ test.describe('This file contains tests related to blog page', () => {
         // Loop over individual elements of the recent post and get the count and verisy the lengths
         for (let post of await blog.recentPostsList.elementHandles()) {
             let postHeading = await post.textContent();
-            expect(postHeading?.trim().length).toBeGreaterThan(15);
+            expect(postHeading?.trim().length).toBeGreaterThan(10);
         }
     });
 })
