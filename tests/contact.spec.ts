@@ -1,21 +1,25 @@
 import { test, expect } from '@playwright/test';
+import ContactPage from '../pages/contact.page';
 
-test.describe('This file contains tests related to Homepage', () => {
+test.describe('This file contains tests related to contact page', () => {
+  let contact: ContactPage;
 
-  test('homepage contains SDET in title', async ({ page }) => {
-    await page.goto('/');
+  test.beforeEach(({ page }) => {
+    contact = new ContactPage(page);
+    // Naviagte to the contact page
+    contact.navigatePage('/contact');
+    // Verify that page title contains Conatact
+    expect(page).toHaveTitle(/Contact/);
+  })
 
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/SDET/);
-  });
+  test('Verify that success message after submitting the contact from', async ({ page }) => {
 
-  test('get started button to be visible', async ({ page }) => {
-    await page.goto('/');
+    // Fill all the form
+    await contact.fillContactForm('Animesh', 'test123@gmail.com', '+44123456789', 'This is a test contact');
+    //  Submit the form
+    await contact.submitContactForm();
+    // Verify success message is appearing in the screen
+    await contact.verifySuccessMessage();
 
-    // Click the get started link.
-    let getStartedButton = page.getByRole('button', { name: 'get started' });
-
-    // Expects that get started button to be visible.
-    expect(getStartedButton).toBeVisible;
   });
 })
