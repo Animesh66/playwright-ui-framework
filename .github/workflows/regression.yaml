@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-20.04 # This is the machine in which the test will get executed.
     steps:
       - uses: actions/checkout@v3 # This step will check out all the code.
-      - uses: actions/setup-node@v2 # This is to set up node
+      - uses: actions/setup-node@v4.1.0 # This is to set up node
         with:
           node-version: "20.8.1" # This will setup node version 14
       - name: Install dependencies
