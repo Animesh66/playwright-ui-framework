@@ -11,10 +11,10 @@ class ContactPage extends BasePage {
 
     constructor(protected _page: Page) {
         super(_page);
-        this.contactName = this._page.getByLabel('Name');
-        this.conatctEmail = this._page.getByLabel('Email');
-        this.contactPhone = this._page.getByLabel('Phone');
-        this.contactMessage = this._page.getByLabel('Message');
+        this.contactName = this._page.getByLabel('Name').first();
+        this.conatctEmail = this._page.getByLabel('Email').first();
+        this.contactPhone = this._page.getByLabel('Phone').first();
+        this.contactMessage = this._page.getByLabel('Message').first();
         this.submitButton = this._page.getByRole('button', { name: 'submit' });
         this.successMessage = this._page.getByRole('alert');
     }
