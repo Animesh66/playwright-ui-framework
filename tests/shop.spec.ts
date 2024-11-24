@@ -16,7 +16,7 @@ filterOptions.forEach(({ filterName }) => {
             shop = new ShopPage(page);
             // Navigate to shop page
             Logger.info("Navigating to shop page.");
-            shop.navigatePage('/shop');
+            await shop.navigatePage('/shop');
             // Verify page title
             Logger.info("Verify page title have shop");
             await expect(page).toHaveTitle(/Shop/);

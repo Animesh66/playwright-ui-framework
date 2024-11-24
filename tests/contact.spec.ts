@@ -11,13 +11,13 @@ test.describe('This file contains tests related to contact page', () => {
   let userMessage: string = faker.lorem.paragraph();
 
 
-  test.beforeEach(({ page }) => {
+  test.beforeEach(async ({ page }) => {
     contact = new ContactPage(page);
     // Naviagte to the contact page
-    contact.navigatePage('/contact/');
+    await contact.navigatePage('/contact');
     // Verify that page title contains Conatact
     Logger.info(`Verify that title have Contact in the page title.`);
-    expect(page).toHaveTitle(/Contact/);
+    await expect(page).toHaveTitle(/Contact/);
   })
 
   test('Verify that success message after submitting the contact from', async () => {
