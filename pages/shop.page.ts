@@ -11,11 +11,11 @@ class ShopPage extends BasePage {
         this.filerSorting = this._page.getByLabel('Shop order');
     }
 
-    async VerifySortBy(label: string) {
-        Logger.info(`Selecting the sort by option to ${label}`);
-        await this.filerSorting.selectOption(label);
-        expect(this.filerSorting).toHaveValue(label);
-        Logger.info(`Filter is changed to ${label}`);
+    async VerifySortBy(filterValue: string) {
+        Logger.info(`Selecting the sort by option to ${filterValue}`);
+        await this.filerSorting.selectOption(filterValue);
+        await expect(this.filerSorting).toHaveValue(filterValue);
+        Logger.info(`Filter is changed to ${filterValue}`);
     }
 }
 

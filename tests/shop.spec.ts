@@ -2,13 +2,13 @@ import { test, expect } from '@playwright/test';
 import ShopPage from '../pages/shop.page';
 import { Logger } from "../utils/logger";
 
-let filterOptions = [{ filterName: 'Sort by popularity' },
-{ filterName: 'Sort by average rating' },
-{ filterName: 'Sort by latest' },
-{ filterName: 'Sort by price: low to high' },
-{ filterName: 'Sort by price: high to low' }];
+let filterOptions = [{ filterValue: 'popularity' },
+{ filterValue: 'rating' },
+{ filterValue: 'date' },
+{ filterValue: 'price' },
+{ filterValue: 'price-desc' }];
 
-filterOptions.forEach(({ filterName }) => {
+filterOptions.forEach(({ filterValue }) => {
     test.describe('This file contains tests related to shop page', () => {
         let shop: ShopPage;
 
@@ -22,8 +22,9 @@ filterOptions.forEach(({ filterName }) => {
             await expect(page).toHaveTitle(/Shop/);
         })
 
-        test(`Verify the sorting is working fine for ${filterName}`, async () => {
-            await shop.VerifySortBy(filterName);
+        test(`Verify the sorting dropdown can be changed based on ${filterValue}`, async () => {
+            Logger.info(`Selecting filer of shop page by ${filterValue}`);
+            await shop.VerifySortBy(filterValue);
         });
     });
 });
