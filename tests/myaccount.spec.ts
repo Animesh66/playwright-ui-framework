@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import MyAccount from '../pages/myAccount.page';
 import { faker } from '@faker-js/faker';
+import { Logger } from "../utils/logger";
 
 test.describe.configure({ mode: 'serial' });
 
@@ -16,18 +17,23 @@ test.describe('This page contains tests related to my account page', () => {
         // Open the url of the account
         await myAccount.navigatePage('/my-account');
         // Verify assertions
+        Logger.info(`Verify that title have account in the page title.`);
         await expect(page).toHaveTitle(/account/);
         // Identify the username field
         await expect(myAccount.userNameRegistration).toBeVisible();
+        Logger.info(`Fill the user name with ${userName}`);
         await myAccount.userNameRegistration.pressSequentially(userName, { delay: 100 });
         // Identify the email field
         await expect(myAccount.userEmailRegistration).toBeVisible();
+        Logger.info(`Fill the user email with ${userEmail}`);
         await myAccount.userEmailRegistration.pressSequentially(userEmail, { delay: 100 });
         // Identify the password field
         await expect(myAccount.userPasswordRegistration).toBeVisible();
+        Logger.info(`Fill the user password with ${userPassword}`);
         await myAccount.userPasswordRegistration.pressSequentially(userPassword, { delay: 100 });
         // Identify Register button
         await expect(myAccount.userRegisterButton).toBeVisible();
+        Logger.info(`Clicking on the Register button.`);
         await myAccount.userRegisterButton.click();
     })
 
