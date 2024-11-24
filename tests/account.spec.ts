@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test'
 import { faker } from '@faker-js/faker';
 import { Logger } from "../utils/logger";
 import MyAccount from '../pages/account.page';
+import * as allure from "allure-js-commons";
 
 test.describe.configure({ mode: 'serial' });
 
@@ -11,7 +12,10 @@ test.describe('This page contains tests related to my account page', () => {
     const userPassword = faker.internet.password();
     let myAccount: MyAccount;
 
-    test.beforeEach(async ({ page }) => {
+    test.beforeEach('Open my account page and verify tittle', async ({ page }) => {
+        await allure.epic("My Account Page");
+        await allure.feature("My account feature");
+        await allure.story("My accounts");
         // Initialize the myAccount page
         myAccount = new MyAccount(page);
         // Open the url of the account
@@ -37,14 +41,14 @@ test.describe('This page contains tests related to my account page', () => {
         await myAccount.userRegisterButton.click();
     })
 
-    test('Scenario to test user registration for non-registered user', async () => {
+    test('Scenario to test user registration for non-registered user @smoke', async () => {
         //Verify that my account page has logged in and Dasboard link is displayed
         await expect(myAccount.dashboardLink).toBeVisible();
         // Verify that the username should be displayed on the page
         await expect(myAccount.myAccountContent).toContainText(userName);
     })
 
-    test('Scenario to test user registration for registered user', async () => {
+    test('Scenario to test user registration for registered user @smoke', async () => {
         // Verify that the username should be displayed on the page
         await expect(myAccount.myAccountErrorMessage).toContainText(`Error: An account is already registered with ${userEmail}. Please log in or use a different email address.`);
     })

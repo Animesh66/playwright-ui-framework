@@ -1,4 +1,4 @@
-import { Page, Locator, expect } from '@playwright/test';
+import { Page, Locator, expect, step } from '@playwright/test';
 import BasePage from "./base.page";
 import { Logger } from "../utils/logger";
 

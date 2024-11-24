@@ -12,7 +12,7 @@ filterOptions.forEach(({ filterValue }) => {
     test.describe('This file contains tests related to shop page', () => {
         let shop: ShopPage;
 
-        test.beforeEach(async ({ page }) => {
+        test.beforeEach('Open shop page and verify tittle', async ({ page }) => {
             shop = new ShopPage(page);
             // Navigate to shop page
             Logger.info("Navigating to shop page.");
@@ -22,7 +22,7 @@ filterOptions.forEach(({ filterValue }) => {
             await expect(page).toHaveTitle(/Shop/);
         })
 
-        test(`Verify the sorting dropdown can be changed based on ${filterValue}`, async () => {
+        test(`Verify the sorting dropdown can be changed based on ${filterValue} @sanity`, async () => {
             Logger.info(`Selecting filer of shop page by ${filterValue}`);
             await shop.VerifySortBy(filterValue);
         });

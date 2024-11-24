@@ -11,7 +11,7 @@ test.describe('This file contains tests related to contact page', () => {
   let userMessage: string = faker.lorem.paragraph();
 
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach('Open contact page and verify tittle', async ({ page }) => {
     contact = new ContactPage(page);
     // Naviagte to the contact page
     await contact.navigatePage('/contact');
@@ -20,7 +20,7 @@ test.describe('This file contains tests related to contact page', () => {
     await expect(page).toHaveTitle(/Contact/);
   })
 
-  test('Verify that success message after submitting the contact from', async () => {
+  test('Verify that success message after submitting the contact from @smoke', async () => {
 
     // Fill all the form
     Logger.info(`Filling out all the details in contact from`);
