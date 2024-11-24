@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-import BasePage from "./basePage.page";
+import BasePage from "./base.page";
 import { Logger } from "../utils/logger";
 
 class ContactPage extends BasePage {

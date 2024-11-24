@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
-import MyAccount from '../pages/myAccount.page';
 import { faker } from '@faker-js/faker';
 import { Logger } from "../utils/logger";
+import MyAccount from '../pages/account.page';
 
 test.describe.configure({ mode: 'serial' });
 

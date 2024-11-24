@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import BasePage from "./basePage.page";
+import BasePage from "./base.page";
 
 class BlogPage extends BasePage {
     recentPostsList: Locator

@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import BasePage from "./basePage.page";
+import BasePage from "./base.page";
 
 class MyAccount extends BasePage {
     userNameRegistration: Locator;
