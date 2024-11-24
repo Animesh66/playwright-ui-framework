@@ -24,4 +24,8 @@ test.describe('This file contains tests related to blog page', () => {
     test('Verify each recent post must have at least 10 charater for headign', async () => {
         // Loop over individual elements of the recent post and get the count and verisy the lengths
         for (let post of await blog.recentPostsList.elementHandles()) {
-            let postHeading = await post.
+            let postHeading = await post.textContent();
+            expect(postHeading?.trim().length).toBeGreaterThan(10);
+        }
+    });
+})
