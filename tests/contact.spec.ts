@@ -24,11 +24,4 @@ test.describe('This file contains tests related to contact page', () => {
 
     // Fill all the form
     Logger.info(`Filling out all the details in contact from`);
-    await contact.fillContactForm(firstName, userEmail, userPhone, userMessage);
-    //  Submit the form
-    await contact.submitContactForm();
-    // Verify success message is appearing in the screen
-    await contact.verifySuccessMessage();
-
-  });
-})
+    await contact.fillContactForm(firstName, userEmail, userPhone, userMessag
