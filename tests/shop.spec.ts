@@ -27,7 +27,7 @@ filterOptions.forEach(({ filterValue }) => {
 
         test(`Verify the sorting dropdown can be changed based on ${filterValue} @sanity`, async () => {
             await test.step(`Step: Select filter value ${filterValue}`, async () => {
-                Logger.info(`Selecting filer of shop page by ${filterValue}`);
+                Logger.info(`Selecting filter value ${filterValue} in shop page`);
                 await shop.VerifySortBy(filterValue);
             });
 
