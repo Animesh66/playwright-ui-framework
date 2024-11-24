@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import BlogPage from '../pages/blog.page';
-
+import { Logger } from "../utils/logger";
 
 test.describe('This file contains tests related to blog page', () => {
     let blog: BlogPage;
@@ -18,7 +18,7 @@ test.describe('This file contains tests related to blog page', () => {
         // Get all the elements of recent post containing multiple elements and count() will
         // return the count of elements in the item
         expect(await blog.recentPostsList.count()).toEqual(5);
-
+        Logger.info(`Verify that recent posts have 5 posts.`);
     });
 
     test('Verify each recent post must have at least 10 charater for headign', async () => {
