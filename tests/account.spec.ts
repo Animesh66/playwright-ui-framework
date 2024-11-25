@@ -4,6 +4,8 @@ import { Logger } from "../utils/logger";
 import MyAccount from '../pages/account.page';
 import * as allure from "allure-js-commons";
 
+// This configuration will make the tests execute serially for this file. Because the next test
+// is dependent on first test
 test.describe.configure({ mode: 'serial' });
 
 test.describe('This page contains tests related to my account page', () => {
